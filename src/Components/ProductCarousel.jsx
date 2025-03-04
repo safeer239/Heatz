@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {headPhones} from "../Constants/data"
+import { Link } from "react-router-dom";
 
 const categories = ["Headset", "Mouse", "Keyboard", "10% Offers"];
 
@@ -47,19 +48,22 @@ const ProductCarousel = () => {
             msOverflowStyle: "none", // IE and Edge
           }}>
         {headPhones.map((product, index) => (
+          <Link to="/product">
+
           <div
             key={index}
             className="bg-white text-black rounded-lg p-4 min-w-[250px] shadow-lg"
-          >
+            >
             <img
               src={product.img}
               alt="product"
               className="w-full h-50 object-cover rounded-lg mb-4"
-            />
+              />
             <p className="text-green-600 text-sm mb-1">{product.buyCategory}</p>
             <p className="text-sm mb-2">{product.description}</p>
             <p className="font-bold">₹{product.price}</p>
           </div>
+              </Link>
         ))}
       </div>
 
