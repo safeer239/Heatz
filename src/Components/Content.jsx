@@ -42,7 +42,6 @@ function Content() {
 
   return (
     <div className="relative bg-black  flex flex-col items-center justify-between px-4 md:px-16 py-10 mt-8">
-      {/* Text Section */}
       <div className="text-white max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
         <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-none mb-4 text-center md:text-left">
           Boost up your <br /> Gaming experience.
@@ -55,7 +54,6 @@ function Content() {
         </p>
       </div>
 
-      {/* Carousel Section */}
       <div className="relative w-full max-w-6xl h-[300px] md:h-[500px] overflow-hidden rounded-xl shadow-xl">
         {slides.map((slide, index) => (
           <div
@@ -72,7 +70,6 @@ function Content() {
               className="object-cover w-full h-full"
             />
 
-            {/* Overlay Content */}
             <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center text-white text-center px-4">
               <h2 className="text-xl md:text-2xl lg:text-4xl font-bold mb-4">
                 {slide.title}
@@ -84,7 +81,6 @@ function Content() {
           </div>
         ))}
 
-        {/* Navigation Buttons */}
         <button
           className="absolute top-1/2 left-2 md:left-4 transform -translate-y-1/2 bg-white/20 p-1 md:p-2 rounded-full hover:bg-white/40 transition"
           onClick={handlePrev}

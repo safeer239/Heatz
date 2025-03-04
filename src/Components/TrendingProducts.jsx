@@ -5,10 +5,9 @@ import { TrendingProduct } from "../Constants/data";
 function TrendingProducts() {
   const carouselRef = useRef(null);
 
-  // Function to handle scrolling
   const scroll = (direction) => {
     if (carouselRef.current) {
-      const scrollAmount = 300; // Adjust scroll distance as needed
+      const scrollAmount = 300;
       carouselRef.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
@@ -26,15 +25,15 @@ function TrendingProducts() {
         </div>
         <div>
           <p className="text-white text-sm">
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. <br />
-            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. <br />
+            Lorem Ipsum has been the industry's standard dummy text ever since
+            the 1500s, when an unknown printer.
           </p>
         </div>
       </div>
 
-      {/* Carousel Container */}
       <div className="relative w-full">
-        {/* Left Arrow */}
         <button
           onClick={() => scroll("left")}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 z-10"
@@ -42,17 +41,16 @@ function TrendingProducts() {
           <FaChevronLeft />
         </button>
 
-        {/* Product Carousel */}
         <div
           ref={carouselRef}
           style={{
             display: "flex",
             gap: "16px",
             overflowX: "auto",
-            scrollbarWidth: "none", // Firefox
-            msOverflowStyle: "none", // IE and Edge
+            scrollbarWidth: "none",
+            msOverflowStyle: "none",
           }}
-          className="no-scrollbar" // Custom class to hide scrollbar for WebKit browsers
+          className="no-scrollbar"
         >
           {TrendingProduct.map((product, index) => (
             <div
@@ -69,7 +67,6 @@ function TrendingProducts() {
           ))}
         </div>
 
-        {/* Right Arrow */}
         <button
           onClick={() => scroll("right")}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white text-black rounded-full p-2 z-10"

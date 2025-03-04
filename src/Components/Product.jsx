@@ -1,10 +1,8 @@
-import React from 'react'
-import IconRow from './IconsRow'
+import React from "react";
+import IconRow from "./IconsRow";
 
 function Product() {
-  return (
-    <IconRow />
-  )
+  return <IconRow />;
 }
 
-export default Product
+export default Product;
